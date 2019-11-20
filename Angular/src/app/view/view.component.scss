@@ -1,0 +1,55 @@
+body,
+html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEZibt_2bg683OB6alEaaP-G3HE7pmdyUseiFdq1KBhC-1PKdRyw");
+  /* Full height */
+  height: 100 vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr :hover th{
+  background-color:#d9f2e6;
+}
+
+th,td{
+  padding:15px;
+}
+
+th{
+  background-color: #6eb300;
+  color:white;
+}
+
+table{
+  width: 100%;
+}
+th{
+  height:50px;
+}
+
+td{
+  height:20px;
+}
+
+.btn{
+  margin-left: 380px;
+  background-color: #6eb300;
+  width:140px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:white;
+}
+
+.button:hover{
+  color: #26734d;
+}
+
+.btn-outline{
+  color: #194d33;
+}

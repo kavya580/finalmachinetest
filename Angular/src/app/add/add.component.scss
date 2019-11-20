@@ -1,0 +1,38 @@
+body,
+html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("https://image.freepik.com/free-vector/abstract-medical-wallpaper-template-design_53876-61802.jpg");
+  /* Full height */
+  height: 100 vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card{
+    background:url("https://media3.giphy.com/media/3ov9k1Eg38tFJH1tbq/giphy.gif");
+    height: 100 vh;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border:none;
+    opacity:.4;
+}
+
+.btn{
+  margin-left: 380px;
+  background-color: #2100b3;
+  width:150px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:white;
+}
+
+.button:hover{
+  color: #26734d;
+}

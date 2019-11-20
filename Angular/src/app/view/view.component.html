@@ -1,0 +1,65 @@
+<div class="bg">
+        <br><br><br><br><br><br>
+<div class="container border border-secondary shadow-lg p-3 mb-5 bg-white rounded" style="width:880px;max-width:870px;background-image: linear-gradient(to right,white, white);"> 
+<link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <a routerLink=""><img src="assets/logout.png" style="width:30px;"/></a> 
+    <a routerLink="/add" class="btn btn-info" style="float:right;">ADD VENDOR</a>
+    <h4 style="margin-left:100px;font-size:20px">VENDOR'S LIST</h4>
+
+<br/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container input-group md-form form-sm form-1 pl-0" style="width:400px;">
+    <div class="input-group-prepend">
+      <span class="input-group-text cyan lighten-2" id="basic-text1"><i class="fa fa-search"
+          aria-hidden="true"></i></span>
+    </div>
+    <input class="form-control my-0 py-1" type="text" placeholder="Search by name/service..."  [(ngModel)]="searchString" (ngModelChange)="search(searchString)"aria-label="Search">
+   <button (click)="search(searchString)" class="btn-outline-info">Search</button>
+  </div>
+
+<br/>
+<div class="container">
+    <br>
+    <table class="table-bordered table-hover" style="margin-left:-10px; width:750px;margin-bottom:40px; text-align:center;">
+        <thead class="thead-light">
+            <tr>
+                <th>Vendor Id</th>
+                <th>Vendor Name</th>
+                <th>Location</th>
+                <th>Service</th>
+                <th>Contact Person</th>
+                <th>Phone Number</th>
+                <th>Edit/Disable</th>
+            </tr>
+        </thead>
+        <tbody class="table-striped table-hover">
+            <tr *ngFor="let detail of details | paginate: { itemsPerPage: 10, currentPage: p }; let i = index">
+                    <td>{{detail.vId}}</td>
+                    <td>{{detail.vName}}</td>
+                    <td>{{detail.vLocation}}</td>
+                    <td>{{detail.vService}}</td>
+                    <td>{{detail.cName}}</td>
+                    <td>{{detail.phone}}</td>
+                    <td><a routerLink="/add"(click) = "edit(detail.vId)"><img src="assets/edit.jpg" style="width:25px;"/></a>&nbsp;&nbsp;
+                      <a mwlConfirmationPopover
+                      [popoverTitle]="popoverTitle"
+                      [popoverMessage]="popoverMessage"
+                      placement="left"
+                      (confirm)="disable(detail.vId)"
+                      (cancel)="cancelClicked=true"> 
+                      <img src="assets/disable.jpg" style="width:25px;"/>
+                    </a>
+                    </td>
+            </tr> 
+        </tbody>
+    </table>
+</div>
+<div style="margin-left: 250px;">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>
+<br><br><br>
+</div>
+
+
